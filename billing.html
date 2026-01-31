@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing & Invoices | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Billing & Invoices</h1>
+                <p>Manage customer payments and generate financial reports.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary"><i class="fas fa-file-export"></i> Export Report</button>
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> Create Invoice</button>
+            </div>
+        </header>
+
+        <section class="stats-grid animate-fade-in">
+            <div class="card">
+                <div class="card-icon" style="color: #51cf66;"><i class="fas fa-check-circle"></i></div>
+                <div class="card-info">
+                    <h3>Paid This Month</h3>
+                    <div class="value">$8,450</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon" style="color: #ff922b;"><i class="fas fa-clock"></i></div>
+                <div class="card-info">
+                    <h3>Pending Invoices</h3>
+                    <div class="value">$1,200</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon" style="color: #ff6b6b;"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="card-info">
+                    <h3>Overdue</h3>
+                    <div class="value">$450</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-container animate-fade-in">
+            <div class="table-header">
+                <h2>Invoice History</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Invoice # or customer name..."
+                        style="background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 8px; outline: none;">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice #</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#INV-8821</td>
+                        <td>Emma Watson</td>
+                        <td>Jan 28, 2026</td>
+                        <td>$120.00</td>
+                        <td><span class="status-pill status-completed">Paid</span></td>
+                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>#INV-8822</td>
+                        <td>Liam Neeson</td>
+                        <td>Jan 30, 2026</td>
+                        <td>$45.00</td>
+                        <td><span class="status-pill status-pending">Pending</span></td>
+                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>#INV-8819</td>
+                        <td>Sarah Miller</td>
+                        <td>Jan 15, 2026</td>
+                        <td>$200.00</td>
+                        <td><span class="status-pill status-completed">Paid</span></td>
+                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>#INV-8810</td>
+                        <td>John Doe</td>
+                        <td>Jan 02, 2026</td>
+                        <td>$60.00</td>
+                        <td><span class="status-pill status-pending"
+                                style="background: rgba(255, 107, 107, 0.1); color: #ff6b6b;">Overdue</span></td>
+                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

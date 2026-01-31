@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Incident Management</h1>
+                <p>Track, resolve, and report studio facilities issues.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-primary" style="background: #ff6b6b;"><i class="fas fa-exclamation-circle"></i>
+                    Report Incident</button>
+            </div>
+        </header>
+
+        <section class="data-container animate-fade-in">
+            <div class="table-header">
+                <h2>Reported Incidents</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Description</th>
+                        <th>Severity</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#INC-102</td>
+                        <td style="font-size: 0.85rem;">Light fixture flickering in Hall B.</td>
+                        <td><span style="color: #ff922b;">Medium</span></td>
+                        <td><span class="status-pill status-pending">Open</span></td>
+                        <td><button class="btn btn-secondary btn-sm">Resolve</button></td>
+                    </tr>
+                    <tr>
+                        <td>#INC-101</td>
+                        <td style="font-size: 0.85rem;">Water leakage in changing room.</td>
+                        <td><span style="color: #ff6b6b;">High</span></td>
+                        <td><span class="status-pill status-active">Resolving</span></td>
+                        <td><button class="btn btn-secondary btn-sm">Resolve</button></td>
+                    </tr>
+                    <tr>
+                        <td>#INC-098</td>
+                        <td style="font-size: 0.85rem;">Sound system bluetooth pairing issue.</td>
+                        <td><span style="color: #adb5bd;">Low</span></td>
+                        <td><span class="status-pill status-completed">Fixed</span></td>
+                        <td><button class="btn btn-secondary btn-sm">Archive</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Requests | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Leave Requests</h1>
+                <p>Track and manage trainer leave applications.</p>
+            </div>
+        </header>
+
+        <section class="data-container animate-fade-in">
+            <div class="table-header">
+                <div class="search-box">
+                    <input type="text" placeholder="Search requests...">
+                </div>
+                <div class="filters">
+                    <button class="btn btn-secondary btn-sm"><i class="fas fa-filter"></i> Filter</button>
+                    <button class="btn btn-secondary btn-sm"><i class="fas fa-arrow-down-short-wide"></i> Sort</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Leave Type</th>
+                        <th>Duration</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-primary);">Sam Taylor</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Trainer</div>
+                        </td>
+                        <td>
+                            <span style="font-size: 0.9rem;"><i class="fas fa-user-injured"
+                                    style="width: 20px; color: var(--text-secondary);"></i> Personal</span>
+                        </td>
+                        <td>
+                            <div style="font-size: 0.9rem;">Feb 02 - Feb 05</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">4 Days</div>
+                        </td>
+                        <td>
+                            <span style="font-size: 0.9rem; color: var(--text-secondary);">Family emergency.</span>
+                        </td>
+                        <td>
+                            <span class="status-pill status-pending">Pending</span>
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-primary btn-sm" title="Approve"><i
+                                        class="fas fa-check"></i></button>
+                                <button class="btn btn-secondary btn-sm" title="Deny"><i
+                                        class="fas fa-times"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-primary);">Elena Rodriguez</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Senior Trainer</div>
+                        </td>
+                        <td>
+                            <span style="font-size: 0.9rem;"><i class="fas fa-plane"
+                                    style="width: 20px; color: var(--text-secondary);"></i> Vacation</span>
+                        </td>
+                        <td>
+                            <div style="font-size: 0.9rem;">Mar 10 - Mar 20</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">10 Days</div>
+                        </td>
+                        <td>
+                            <span style="font-size: 0.9rem; color: var(--text-secondary);">Annual vacation.</span>
+                        </td>
+                        <td>
+                            <span class="status-pill status-active">Approved</span>
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-icon"
+                                    style="background: none; border: none; color: var(--text-secondary); cursor: pointer;"><i
+                                        class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

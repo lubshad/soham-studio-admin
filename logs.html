@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Logs | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Activity Logs</h1>
+                <p>Detailed history of system actions and user activities.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary"><i class="fas fa-download"></i> Export Logs</button>
+            </div>
+        </header>
+
+        <section class="data-container animate-fade-in">
+            <div class="table-header">
+                <div class="search-box">
+                    <input type="text" placeholder="Search logs...">
+                </div>
+                <div class="filters">
+                    <button class="btn btn-secondary btn-sm"><i class="fas fa-filter"></i> Filter</button>
+                    <button class="btn btn-secondary btn-sm"><i class="fas fa-calendar-alt"></i> Date Range</button>
+                    <button class="btn btn-secondary btn-sm">Clear Logs</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                        <th>Details</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-primary);">Aman L.</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">App Admin</div>
+                        </td>
+                        <td><span class="status-pill status-active"
+                                style="background: rgba(77, 171, 247, 0.1); color: #4dabf7;">Create</span></td>
+                        <td>Created new batch</td>
+                        <td><strong>'Advanced Hatha 2026'</strong></td>
+                        <td style="font-size: 0.85rem; color: var(--text-secondary);">Today, 02:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-primary);">Sarah M.</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Studio Manager</div>
+                        </td>
+                        <td><span class="status-pill status-pending"
+                                style="background: rgba(255, 146, 43, 0.1); color: #ff922b;">Approval</span></td>
+                        <td>Approved leave request</td>
+                        <td>For <strong>Elena Rodriguez</strong></td>
+                        <td style="font-size: 0.85rem; color: var(--text-secondary);">Today, 11:45 AM</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-primary);">System</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Automated</div>
+                        </td>
+                        <td><span class="status-pill status-active"
+                                style="background: rgba(51, 154, 240, 0.1); color: #339af0;">System</span></td>
+                        <td>Backup completed</td>
+                        <td>Database backup successfully</td>
+                        <td style="font-size: 0.85rem; color: var(--text-secondary);">Today, 00:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-primary);">Rahul K.</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Receptionist</div>
+                        </td>
+                        <td><span class="status-pill status-active"
+                                style="background: rgba(77, 171, 247, 0.1); color: #4dabf7;">Update</span></td>
+                        <td>Updated contact info</td>
+                        <td>Student: <strong>Emma Watson</strong></td>
+                        <td style="font-size: 0.85rem; color: var(--text-secondary);">Yesterday, 06:20 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

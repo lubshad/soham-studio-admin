@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="logo-container">
+            <img src="../../brain/9af962cd-2b1a-4dd4-866a-0d4624ee6f9f/soham_studio_logo_1769852022839.png"
+                alt="Soham Studio Logo">
+            <h2>SOHAM STUDIO</h2>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link active"><i
+                        class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+            <li class="nav-item"><a href="schedule.html" class="nav-link"><i
+                        class="fas fa-calendar-alt"></i><span>Schedule</span></a></li>
+            <li class="nav-item"><a href="customers.html" class="nav-link"><i
+                        class="fas fa-user-friends"></i><span>Customers</span></a></li>
+            <li class="nav-item"><a href="memberships.html" class="nav-link"><i
+                        class="fas fa-id-card"></i><span>Membership Plans</span></a></li>
+            <li class="nav-item"><a href="subscriptions.html" class="nav-link"><i
+                        class="fas fa-clipboard-list"></i><span>Subscriptions</span></a></li>
+            <li class="nav-item"><a href="batches.html" class="nav-link"><i
+                        class="fas fa-layer-group"></i><span>Batches</span></a></li>
+            <li class="nav-item"><a href="trainers.html" class="nav-link"><i
+                        class="fas fa-user-tie"></i><span>Trainers</span></a></li>
+            <li class="nav-item"><a href="leaves.html" class="nav-link"><i
+                        class="fas fa-calendar-minus"></i><span>Leaves</span></a></li>
+            <li class="nav-item"><a href="billing.html" class="nav-link"><i
+                        class="fas fa-file-invoice-dollar"></i><span>Billing & Invoices</span></a></li>
+            <li class="nav-item"><a href="incidents.html" class="nav-link"><i
+                        class="fas fa-exclamation-triangle"></i><span>Incidents</span></a></li>
+            <li class="nav-item"><a href="logs.html" class="nav-link"><i class="fas fa-history"></i><span>Activity
+                        Logs</span></a></li>
+            <li class="nav-item"><a href="users.html" class="nav-link"><i class="fas fa-users-cog"></i><span>User
+                        Management</span></a></li>
+        </ul>
+        <div class="nav-item" style="margin-top: auto;">
+            <a href="#" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Welcome Back, Namaste</h1>
+                <p>Overview of Soham Studio for today.</p>
+            </div>
+            <div class="user-profile">
+                <div class="user-img"></div>
+                <div class="user-info">
+                    <span style="display: block; font-size: 0.9rem; font-weight: 600;">Admin User</span>
+                    <span style="display: block; font-size: 0.75rem; color: var(--text-secondary);">Chief Manager</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="stats-grid animate-fade-in">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <div class="card-info">
+                    <h3>Active Customers</h3>
+                    <div class="value">1,284</div>
+                    <div class="trend up"><i class="fas fa-arrow-up"></i> 12% from last month</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon" style="color: #ae3ec9;"><i class="fas fa-id-card"></i></div>
+                <div class="card-info">
+                    <h3>Active Memberships</h3>
+                    <div class="value">982</div>
+                    <div class="trend up"><i class="fas fa-arrow-up"></i> 8% from last month</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="card-info">
+                    <h3>Monthly Revenue</h3>
+                    <div class="value">$12,450</div>
+                    <div class="trend up"><i class="fas fa-arrow-up"></i> 5% from last month</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-clock"></i></div>
+                <div class="card-info">
+                    <h3>Sessions Today</h3>
+                    <div class="value">24</div>
+                    <div class="trend up"><i class="fas fa-arrow-up"></i> 4 more than yesterday</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-grid animate-fade-in"
+            style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+            <div class="data-container">
+                <div class="table-header">
+                    <h2>Upcoming Schedules</h2>
+                    <a href="schedule.html" class="btn btn-secondary btn-sm" style="text-decoration: none;">View
+                        Calendar</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class (Batch)</th>
+                            <th>Trainer</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00 AM</td>
+                            <td>Hatha Flow (A1)</td>
+                            <td>Sarah Wilson</td>
+                            <td>Lotus Hall</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM</td>
+                            <td>Power Yoga (B2)</td>
+                            <td>John Doe</td>
+                            <td>Stillness Hall</td>
+                        </tr>
+                        <tr>
+                            <td>04:00 PM</td>
+                            <td>Meditation (C3)</td>
+                            <td>Emma Stone</td>
+                            <td>Zen Garden</td>
+                        </tr>
+                        <tr>
+                            <td>06:30 PM</td>
+                            <td>Vinyasa Flow (A2)</td>
+                            <td>Michael Brown</td>
+                            <td>Lotus Hall</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-container">
+                <div class="table-header">
+                    <h2>Activity Log</h2>
+                </div>
+                <div class="activity-feed">
+                    <div style="margin-bottom: 1.5rem; border-left: 2px solid var(--primary); padding-left: 1rem;">
+                        <p style="font-size: 0.9rem; margin-bottom: 0.2rem;"><strong>Admin</strong> added new batch 'Sun
+                            Salute A'.</p>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);">2 hours ago</span>
+                    </div>
+                    <div style="margin-bottom: 1.5rem; border-left: 2px solid var(--secondary); padding-left: 1rem;">
+                        <p style="font-size: 0.9rem; margin-bottom: 0.2rem;"><strong>System</strong> generated 12
+                            monthly invoices.</p>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);">5 hours ago</span>
+                    </div>
+                    <div style="margin-bottom: 1.5rem; border-left: 2px solid #ff6b6b; padding-left: 1rem;">
+                        <p style="font-size: 0.9rem; margin-bottom: 0.2rem;"><strong>Trainer</strong> Sarah requested
+                            leave.</p>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);">Yesterday</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

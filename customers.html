@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Customer Database</h1>
+                <p>Track student memberships and attendance.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-primary"><i class="fas fa-user-plus"></i> Register New Student</button>
+            </div>
+        </header>
+
+        <section class="data-container animate-fade-in">
+            <div class="table-header">
+                <div class="search-box" style="display: flex; gap: 1rem; align-items: center; flex-grow: 1;">
+                    <i class="fas fa-search"
+                        style="color: var(--text-secondary); position: absolute; margin-left: 1rem;"></i>
+                    <input type="text" placeholder="Search by name, email or phone..."
+                        style="background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-primary); padding: 0.7rem 1rem 0.7rem 2.8rem; border-radius: 12px; outline: none; width: 100%; max-width: 400px;">
+                </div>
+                <div class="filters" style="display: flex; gap: 0.5rem;">
+                    <button class="btn btn-secondary btn-sm">Membership: All</button>
+                    <button class="btn btn-secondary btn-sm">Status: Active</button>
+                    <button class="btn btn-secondary btn-sm"><i class="fas fa-download"></i> Export</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Membership</th>
+                        <th>Joined Date</th>
+                        <th>Sessions Left</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600;">Emma Watson</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">emma.w@gmail.com</div>
+                        </td>
+                        <td><span style="color: var(--secondary);">Gold Annual</span></td>
+                        <td>Oct 12, 2025</td>
+                        <td>Unlimited</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" style="padding: 0.4rem 0.8rem;">Profile</button>
+                            <button class="btn btn-primary btn-sm" style="padding: 0.4rem 0.8rem;">Enroll</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600;">Liam Neeson</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">liam.n@yahoo.com</div>
+                        </td>
+                        <td>Monthly Pass</td>
+                        <td>Jan 05, 2026</td>
+                        <td>12 / 20</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" style="padding: 0.4rem 0.8rem;">Profile</button>
+                            <button class="btn btn-primary btn-sm" style="padding: 0.4rem 0.8rem;">Enroll</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600;">Sophie Turner</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">sophie.t@proton.me</div>
+                        </td>
+                        <td><span style="color: var(--primary);">Silver Monthly</span></td>
+                        <td>Aug 22, 2025</td>
+                        <td>0</td>
+                        <td><span class="status-pill status-pending"
+                                style="background: rgba(255, 107, 107, 0.1); color: #ff6b6b;">Expired</span></td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" style="padding: 0.4rem 0.8rem;">Renew</button>
+                            <button class="btn btn-primary btn-sm" style="padding: 0.4rem 0.8rem;">Enroll</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

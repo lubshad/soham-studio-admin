@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Subscriptions</h1>
+                <p>View and manage active member subscriptions.</p>
+            </div>
+        </header>
+
+        <section class="data-container animate-fade-in">
+            <div class="table-header">
+                <h2>Active Subscriptions</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search member..."
+                        style="background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 8px; outline: none;">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Member Name</th>
+                        <th>Plan</th>
+                        <th>Start Date</th>
+                        <th>Next Billing</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Emma Watson</td>
+                        <td>Gold Annual</td>
+                        <td>Oct 12, 2025</td>
+                        <td>Oct 12, 2026</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td><button class="btn btn-secondary btn-sm">Manage</button></td>
+                    </tr>
+                    <tr>
+                        <td>Liam Neeson</td>
+                        <td>Silver Monthly</td>
+                        <td>Jan 05, 2026</td>
+                        <td>Feb 05, 2026</td>
+                        <td><span class="status-pill status-active">Active</span></td>
+                        <td><button class="btn btn-secondary btn-sm">Manage</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sophie Turner</td>
+                        <td>Silver Monthly</td>
+                        <td>Aug 22, 2025</td>
+                        <td>Sep 22, 2025</td>
+                        <td><span class="status-pill status-pending"
+                                style="color: #ff6b6b; background: rgba(255, 107, 107, 0.1);">Expired</span></td>
+                        <td><button class="btn btn-secondary btn-sm">Renew</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

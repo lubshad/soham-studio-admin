@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memberships | Soham Studio Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script src="components/sidebar.js"></script>
+
+    <main class="main-content">
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Membership Management</h1>
+                <p>Manage subscription plans and member access.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> New Plan</button>
+            </div>
+        </header>
+
+        <section class="data-container animate-fade-in" style="margin-bottom: 2rem;">
+            <div class="table-header">
+                <h2>Active Plans</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search plans..."
+                        style="background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 8px; outline: none;">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plan Name</th>
+                        <th>Price</th>
+                        <th>Benefits</th>
+                        <th>Active Members</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div
+                                    style="width: 4px; height: 40px; background: var(--secondary); border-radius: 2px;">
+                                </div>
+                                <strong>Gold Annual</strong>
+                            </div>
+                        </td>
+                        <td><span class="status-pill status-active">$1,200/yr</span></td>
+                        <td>Unlimited classes, priority booking, 2 private sessions/mo</td>
+                        <td><i class="fas fa-users"></i> 42</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 4px; height: 40px; background: var(--primary); border-radius: 2px;">
+                                </div>
+                                <strong>Silver Monthly</strong>
+                            </div>
+                        </td>
+                        <td><span class="status-pill status-active">$120/mo</span></td>
+                        <td>Unlimited group classes</td>
+                        <td><i class="fas fa-users"></i> 156</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 4px; height: 40px; background: #ff922b; border-radius: 2px;"></div>
+                                <strong>10-Class Punch Card</strong>
+                            </div>
+                        </td>
+                        <td><span class="status-pill status-active">$150</span></td>
+                        <td>Valid for 3 months, 10 standard classes</td>
+                        <td><i class="fas fa-users"></i> 89</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+</body>
+
+</html>
