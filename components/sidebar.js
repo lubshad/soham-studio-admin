@@ -16,7 +16,7 @@ function renderSidebar() {
         { href: 'users.html', icon: 'fas fa-users-cog', text: 'User Management' }
     ];
 
-    const logoSrc = 'assets/logo.png';
+    const logoSrc = 'assets/logo.jpg';
 
     const navHTML = `
     <nav class="sidebar">
