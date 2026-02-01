@@ -1,6 +1,6 @@
 function renderSidebar() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
+
     const navItems = [
         { href: 'index.html', icon: 'fas fa-th-large', text: 'Dashboard' },
         { href: 'schedule.html', icon: 'fas fa-calendar-alt', text: 'Schedule' },
@@ -16,7 +16,7 @@ function renderSidebar() {
         { href: 'users.html', icon: 'fas fa-users-cog', text: 'User Management' }
     ];
 
-    const logoSrc = '../../brain/9af962cd-2b1a-4dd4-866a-0d4624ee6f9f/soham_studio_logo_1769852022839.png';
+    const logoSrc = 'assets/logo.png';
 
     const navHTML = `
     <nav class="sidebar">
