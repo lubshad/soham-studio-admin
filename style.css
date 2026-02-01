@@ -1,21 +1,21 @@
 :root {
-    --primary: #4A6C56;
-    /* Deep Sage Green */
+    --primary: #70a843;
+    /* Fresh Grass Green from Logo */
     --secondary: #A68A4E;
-    /* Deep Muted Gold */
-    --bg-dark: #F5F7F6;
-    /* Soft White/Gray Background */
-    --bg-card: rgba(255, 255, 255, 0.85);
-    --text-primary: #2C3E50;
-    /* Dark Slate Blue */
-    --text-secondary: #647D87;
-    /* Slate Gray */
+    /* Deep Muted Gold - Kept for Earthy contrast */
+    --bg-dark: #F5F9F6;
+    /* Slightly Fresher White/Green tint Background */
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --text-primary: #1a2e1f;
+    /* Darker Green/Black for text */
+    --text-secondary: #5a7060;
+    /* Muted Green/Gray */
     --accent: #E2E8F0;
-    --glass: rgba(255, 255, 255, 0.75);
-    --glass-border: rgba(200, 200, 200, 0.4);
+    --glass: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(112, 168, 67, 0.2);
     --sidebar-width: 260px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-soft: 0 4px 15px -1px rgba(112, 168, 67, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 * {
@@ -129,9 +129,9 @@ body {
 }
 
 .nav-link.active {
-    background: rgba(125, 157, 133, 0.15);
+    background: rgba(112, 168, 67, 0.15);
     color: var(--primary);
-    border: 1px solid rgba(125, 157, 133, 0.3);
+    border: 1px solid rgba(112, 168, 67, 0.3);
 }
 
 .nav-link i {
@@ -208,7 +208,7 @@ header {
 .card-icon {
     width: 45px;
     height: 45px;
-    background: rgba(74, 108, 86, 0.1);
+    background: rgba(112, 168, 67, 0.1);
     /* Adjusted based on new primary dark hex */
     color: var(--primary);
     border-radius: 12px;
@@ -275,7 +275,7 @@ header {
 .search-box input:focus {
     border-color: var(--primary);
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 0 3px rgba(74, 108, 86, 0.1);
+    box-shadow: 0 0 0 3px rgba(112, 168, 67, 0.1);
 }
 
 table {
@@ -343,7 +343,7 @@ tr:last-child td {
 }
 
 .btn-primary:hover {
-    background: #6c8a74;
+    background: #5d8f36;
 }
 
 .btn-secondary {
