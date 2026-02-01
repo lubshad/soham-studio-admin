@@ -148,6 +148,19 @@ const TrainerFormHTML = `
                     <input type="number" class="form-input" placeholder="e.g. 5" min="0">
                 </div>
 
+                <div class="form-group">
+                    <label class="form-label">Week Off</label>
+                    <select class="form-input">
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
+                    </select>
+                </div>
+
                 <div class="form-group full-width">
                     <label class="form-label">Bio / Profile Description</label>
                     <textarea class="form-input" style="min-height: 100px; resize: vertical;" placeholder="Brief introduction..."></textarea>

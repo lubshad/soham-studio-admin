@@ -160,6 +160,10 @@ const StudentFormStyles = `
     .form-group:nth-child(3) { animation-delay: 0.2s; }
     .form-group:nth-child(4) { animation-delay: 0.25s; }
     .form-group:nth-child(5) { animation-delay: 0.3s; }
+    .form-group:nth-child(6) { animation-delay: 0.35s; }
+    .form-group:nth-child(7) { animation-delay: 0.4s; }
+    .form-group:nth-child(8) { animation-delay: 0.45s; }
+    .form-group:nth-child(9) { animation-delay: 0.5s; }
 </style>
 `;
 
@@ -202,8 +206,36 @@ const StudentFormHTML = `
                 </div>
 
                 <div class="form-group">
+                    <label class="form-label">Select Batch</label>
+                    <select class="form-input" required>
+                        <option value="" disabled selected>Select a batch...</option>
+                        <option value="b1">Morning Flow (18/20 - 90% Full)</option>
+                        <option value="b2">Advanced Hatha (12/15 - 80% Full)</option>
+                        <option value="b3">Evening Zen (0/25 - 0% Full)</option>
+                        <option value="b4">Hatha Yoga (5/20 - 25% Full)</option>
+                        <option value="b5">Vinyasa Flow (8/15 - 53% Full)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label class="form-label">Start Date</label>
                     <input type="date" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Referral Source</label>
+                    <select class="form-input">
+                        <option value="">Select source...</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="friend">Friend/Referral</option>
+                        <option value="google">Google Search</option>
+                        <option value="walkin">Walk-in</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Referred By (Name)</label>
+                    <input type="text" class="form-input" placeholder="e.g. John Smith">
                 </div>
 
                 <div class="form-group full-width">

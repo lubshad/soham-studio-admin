@@ -7,6 +7,8 @@
     <title>Dashboard | Soham Studio Admin</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
 </head>
 
 <body>
@@ -18,11 +20,29 @@
                 <h1>Welcome Back, Namaste</h1>
                 <p>Overview of Soham Studio for today.</p>
             </div>
-            <div class="user-profile">
-                <div class="user-img"></div>
-                <div class="user-info">
-                    <span style="display: block; font-size: 0.9rem; font-weight: 600;">Admin User</span>
-                    <span style="display: block; font-size: 0.75rem; color: var(--text-secondary);">Chief Manager</span>
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+                <div class="header-actions">
+                    <div class="date-selector-wrapper">
+                        <select id="date-preset" class="btn-secondary"
+                            style="padding: 0.6rem 1rem; border-radius: 12px; font-size: 0.85rem; outline: none; border: 1px solid var(--glass-border);">
+                            <option value="today">Today</option>
+                            <option value="month" selected>This Month</option>
+                            <option value="year">This Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                        <div class="date-range-filter" id="custom-range-container" style="display: none;">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="text" id="date-range" placeholder="Select Date Range" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="user-img"></div>
+                    <div class="user-info">
+                        <span style="display: block; font-size: 0.9rem; font-weight: 600;">Admin User</span>
+                        <span style="display: block; font-size: 0.75rem; color: var(--text-secondary);">Chief
+                            Manager</span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -133,6 +153,48 @@
             </div>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const datePreset = document.getElementById('date-preset');
+            const customRangeContainer = document.getElementById('custom-range-container');
+
+            const fp = flatpickr("#date-range", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                onClose: function (selectedDates, dateStr, instance) {
+                    console.log("Selected range: ", dateStr);
+                }
+            });
+
+            datePreset.addEventListener('change', function () {
+                const value = this.value;
+                const today = new Date();
+
+                if (value === 'custom') {
+                    customRangeContainer.style.display = 'flex';
+                    fp.open();
+                } else {
+                    customRangeContainer.style.display = 'none';
+                    let start, end = new Date();
+
+                    if (value === 'today') {
+                        start = new Date();
+                    } else if (value === 'month') {
+                        start = new Date(today.getFullYear(), today.getMonth(), 1);
+                    } else if (value === 'year') {
+                        start = new Date(today.getFullYear(), 0, 1);
+                    }
+
+                    fp.setDate([start, end]);
+                    console.log(`Selected preset ${value}: `, start, end);
+                }
+            });
+
+            // Initial trigger
+            datePreset.dispatchEvent(new Event('change'));
+        });
+    </script>
 </body>
 
 </html>

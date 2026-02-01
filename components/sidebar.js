@@ -11,6 +11,7 @@ function renderSidebar() {
         { href: 'trainers.html', icon: 'fas fa-user-tie', text: 'Trainers' },
         { href: 'leaves.html', icon: 'fas fa-calendar-minus', text: 'Leaves' },
         { href: 'billing.html', icon: 'fas fa-file-invoice-dollar', text: 'Billing & Invoices' },
+        { href: 'expenses.html', icon: 'fas fa-wallet', text: 'Expenses' },
         { href: 'incidents.html', icon: 'fas fa-exclamation-triangle', text: 'Incidents' },
         { href: 'logs.html', icon: 'fas fa-history', text: 'Activity Logs' },
         { href: 'users.html', icon: 'fas fa-users-cog', text: 'User Management' }

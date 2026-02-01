@@ -278,6 +278,57 @@ header {
     box-shadow: 0 0 0 3px rgba(112, 168, 67, 0.1);
 }
 
+.date-selector-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.date-range-filter {
+    display: flex;
+    align-items: center;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    gap: 0.8rem;
+    transition: var(--transition);
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.date-range-filter:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-soft);
+}
+
+.date-range-filter i {
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.date-range-filter input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+.date-range-filter .fa-chevron-down {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.date-range-filter:hover .fa-chevron-down {
+    transform: translateY(2px);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -334,7 +385,14 @@ tr:last-child td {
     transition: var(--transition);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
 }
 
 .btn-primary {
@@ -354,6 +412,12 @@ tr:last-child td {
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-refund:hover {
+    background: rgba(255, 146, 43, 0.1);
+    color: #ff922b;
+    border-color: rgba(255, 146, 43, 0.3);
 }
 
 /* Animations */

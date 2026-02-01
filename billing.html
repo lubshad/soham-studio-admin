@@ -7,6 +7,8 @@
     <title>Billing & Invoices | Soham Studio Admin</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
 </head>
 
 <body>
@@ -19,7 +21,20 @@
                 <h1>Billing & Invoices</h1>
                 <p>Manage customer payments and generate financial reports.</p>
             </div>
-            <div class="header-actions">
+            <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <div class="date-selector-wrapper">
+                    <select id="date-preset" class="btn-secondary"
+                        style="padding: 0.6rem 1rem; border-radius: 12px; font-size: 0.85rem; outline: none; border: 1px solid var(--glass-border);">
+                        <option value="today">Today</option>
+                        <option value="month" selected>This Month</option>
+                        <option value="year">This Year</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                    <div class="date-range-filter" id="custom-range-container" style="display: none;">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="text" id="date-range" placeholder="Select Date Range" readonly>
+                    </div>
+                </div>
                 <button class="btn btn-secondary"><i class="fas fa-file-export"></i> Export Report</button>
                 <button id="create-invoice-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Create
                     Invoice</button>
@@ -76,7 +91,14 @@
                         <td>Jan 28, 2026</td>
                         <td>$120.00</td>
                         <td><span class="status-pill status-completed">Paid</span></td>
-                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary btn-sm" title="View Details"><i
+                                        class="fas fa-eye"></i></button>
+                                <button class="btn btn-secondary btn-sm btn-refund" title="Refund Invoice"><i
+                                        class="fas fa-rotate-left"></i></button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>#INV-8822</td>
@@ -84,7 +106,14 @@
                         <td>Jan 30, 2026</td>
                         <td>$45.00</td>
                         <td><span class="status-pill status-pending">Pending</span></td>
-                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary btn-sm" title="View Details"><i
+                                        class="fas fa-eye"></i></button>
+                                <button class="btn btn-secondary btn-sm btn-refund" title="Refund Invoice"><i
+                                        class="fas fa-rotate-left"></i></button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>#INV-8819</td>
@@ -92,7 +121,14 @@
                         <td>Jan 15, 2026</td>
                         <td>$200.00</td>
                         <td><span class="status-pill status-completed">Paid</span></td>
-                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary btn-sm" title="View Details"><i
+                                        class="fas fa-eye"></i></button>
+                                <button class="btn btn-secondary btn-sm btn-refund" title="Refund Invoice"><i
+                                        class="fas fa-rotate-left"></i></button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>#INV-8810</td>
@@ -101,12 +137,73 @@
                         <td>$60.00</td>
                         <td><span class="status-pill status-pending"
                                 style="background: rgba(255, 107, 107, 0.1); color: #ff6b6b;">Overdue</span></td>
-                        <td><button class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></button></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary btn-sm" title="View Details"><i
+                                        class="fas fa-eye"></i></button>
+                                <button class="btn btn-secondary btn-sm btn-refund" title="Refund Invoice"><i
+                                        class="fas fa-rotate-left"></i></button>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const datePreset = document.getElementById('date-preset');
+            const customRangeContainer = document.getElementById('custom-range-container');
+
+            const fp = flatpickr("#date-range", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                onClose: function (selectedDates, dateStr, instance) {
+                    console.log("Selected Billing range: ", dateStr);
+                }
+            });
+
+            datePreset.addEventListener('change', function () {
+                const value = this.value;
+                const today = new Date();
+
+                if (value === 'custom') {
+                    customRangeContainer.style.display = 'flex';
+                    fp.open();
+                } else {
+                    customRangeContainer.style.display = 'none';
+                    let start, end = new Date();
+
+                    if (value === 'today') {
+                        start = new Date();
+                    } else if (value === 'month') {
+                        start = new Date(today.getFullYear(), today.getMonth(), 1);
+                    } else if (value === 'year') {
+                        start = new Date(today.getFullYear(), 0, 1);
+                    }
+
+                    fp.setDate([start, end]);
+                    console.log(`Selected preset ${value}: `, start, end);
+                }
+            });
+
+            // Initial trigger
+            datePreset.dispatchEvent(new Event('change'));
+
+            // Refund action click handler
+            document.querySelectorAll('.btn-refund').forEach(button => {
+                button.addEventListener('click', function () {
+                    const row = this.closest('tr');
+                    const invoiceId = row.querySelector('td:first-child').textContent;
+                    const customer = row.querySelector('td:nth-child(2)').textContent;
+                    if (confirm(`Are you sure you want to refund invoice ${invoiceId} for ${customer}?`)) {
+                        alert(`Refund initiated for ${invoiceId}`);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
